@@ -1,0 +1,27 @@
+{
+  "name": "bodyone-backend-node",
+  "version": "1.0.0",
+  "description": "Server-side logic for the BodyOne app, built with Node.js. Handles API integrations, database connections, and processes requests from the frontend. Follows Airbnb's JavaScript Style Guide.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJLewis/bodyone-backend-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AJLewis/bodyone-backend-node/issues"
+  },
+  "homepage": "https://github.com/AJLewis/bodyone-backend-node#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.1"
+  }
+}
