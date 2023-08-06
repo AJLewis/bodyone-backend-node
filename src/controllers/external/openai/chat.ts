@@ -9,15 +9,20 @@ const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
-const openai = new OpenAIApi(configuration);
+const openai = new OpenAIApi(configuration)
+
+
 
 export const getChat = async (req: Request, res: Response, next?: NextFunction) => {
     console.log('GETTING CHAT')
+
+
     try {
         const messages: any[] = req.body.messages
         const model = req.body.model ? req.body.model : OpenAiChatModels['gpt35turbo'];
         const maxTokens = req.body.maxTokens ? req.body.maxTokens : 3000;
-        
+        const functions = req.body.functions ? req.body.functions : null;
+
         console.log(messages);
         console.log(model);
         console.log(maxTokens);
@@ -26,7 +31,7 @@ export const getChat = async (req: Request, res: Response, next?: NextFunction) 
         const gptResponse = await openai.createChatCompletion({
             model: model,
             messages: messages,
-            max_tokens: maxTokens
+            max_tokens: maxTokens,
         });
 
         console.log(gptResponse)

@@ -1,7 +1,7 @@
 // backend/src/routes/response.ts
 
 import express from 'express';
-import * as aicoach from '../controllers/internal/ai-coach'
+import * as aicoach from '../controllers/crud/ai-coach'
 
 const router = express.Router();
 

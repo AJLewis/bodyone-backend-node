@@ -1,7 +1,7 @@
 // backend/src/routes/response.ts
 
 import express from 'express';
-import * as mealPlan from '../controllers/internal/meal-plan'
+import * as mealPlan from '../controllers/crud/meal-plan'
 
 const router = express.Router();
 

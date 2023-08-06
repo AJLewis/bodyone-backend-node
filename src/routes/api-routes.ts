@@ -1,6 +1,6 @@
 
 import express from 'express';
-import { checkUserToken } from '../controllers/internal/authentication';
+import { checkUserToken } from '../controllers/crud/authentication';
 import privateRoutes from './private-routes';
 import publicRoutes from './public-routes';
 

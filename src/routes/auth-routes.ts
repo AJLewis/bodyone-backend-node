@@ -1,7 +1,7 @@
 import express from 'express';
 
 import passport from 'passport';
-import * as auth from '../controllers/internal/authentication';
+import * as auth from '../controllers/crud/authentication';
 
 const router = express.Router();
 

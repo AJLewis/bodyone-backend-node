@@ -1,7 +1,7 @@
 // backend/src/routes/response.ts
 
 import express from 'express';
-import * as ingredients from '../controllers/internal/ingredients'
+import * as ingredients from '../controllers/crud/ingredients'
 
 const router = express.Router();
 

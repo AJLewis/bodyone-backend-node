@@ -1,7 +1,7 @@
 // backend/src/routes/response.ts
 
 import express from 'express';
-import * as meal from '../controllers/internal/meal'
+import * as meal from '../controllers/crud/meal'
 
 const router = express.Router();
 router.get('/', meal.getAllMeals);

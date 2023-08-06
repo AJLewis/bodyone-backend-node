@@ -1,7 +1,7 @@
 // backend/src/routes/response.ts
 
 import express from 'express';
-import * as users from '../controllers/internal/user'
+import * as users from '../controllers/crud/user'
 
 const router = express.Router();
 router.get('/', users.getAllUsers);

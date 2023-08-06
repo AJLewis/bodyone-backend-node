@@ -1,7 +1,7 @@
 // backend/src/routes/response.ts
 
 import express from 'express';
-import * as points from '../controllers/internal/points'
+import * as points from '../controllers/crud/points'
 
 const router = express.Router();
 router.get('/', points.getAllPoints);

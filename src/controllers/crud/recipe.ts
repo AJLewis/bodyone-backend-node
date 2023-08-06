@@ -1,4 +1,3 @@
-
 import express, { NextFunction, Request, Response } from 'express';
 import RecipeModel from '../../models/Recipe.model';
 
@@ -21,6 +20,7 @@ export const createRecipe = async (req: Request, res: Response, next?: NextFunct
 export const getAllRecipes = async (req: Request, res: Response, next?: NextFunction) => {
   try {
       const recipes = await RecipeModel.find({}).populate('ingredients.ingredient');
+      console.log(`recipes length ${recipes.length}`)
       res.send(recipes);
   } catch (e) {
       console.error(e); // optional, logs the error on your server

@@ -1,7 +1,7 @@
 // backend/src/routes/response.ts
 
 import express from 'express';
-import * as workoutplan from '../controllers/internal/workout-plan'
+import * as workoutplan from '../controllers/crud/workout-plan'
 
 const router = express.Router();
 

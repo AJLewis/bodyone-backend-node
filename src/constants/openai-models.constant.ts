@@ -13,6 +13,7 @@ interface OpenAiChatModels {
     readonly gpt432k0314 : string;
     readonly gpt35turbo : string;
     readonly gpt35turbo0301 : string;
+    readonly gpt35turbo0613: string;
 }
 
 export const OpenAiCompletionModels: OpenAiCompletionModels = {
@@ -29,5 +30,6 @@ export const OpenAiChatModels: OpenAiChatModels = {
     gpt432k : 'gpt-4-32k',
     gpt432k0314 : 'gpt-4-32k-0314',
     gpt35turbo : 'gpt-3.5-turbo',
-    gpt35turbo0301 : 'gpt-3.5-turbo-0301'
+    gpt35turbo0301 : 'gpt-3.5-turbo-0301',
+    gpt35turbo0613: "gpt-3.5-turbo-0613"
 }
