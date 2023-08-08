@@ -86,7 +86,7 @@ export const createSingleMealPlan: any = async (
             ],
         };
         const aiResponse = await axios.post(
-            'http://localhost:5001/api/private/openai/chat',
+            `${process.env.API_BASE_HREF}${process.env.API_PRIVATE_LINK}/openai/chat`,
             aiRequest,
             {
                 headers: {
@@ -186,7 +186,7 @@ async function createAiRecipe(recipeName: string, index = 0) {
 
     try {
         const aiRecipeResponse = await axios.post(
-            'http://localhost:5001/api/private/openai/chat',
+            `${process.env.API_BASE_HREF}${process.env.API_PRIVATE_LINK}/openai/chat`,
             aiRecipeRequest,
             {
                 headers: {
@@ -217,7 +217,7 @@ async function createAiRecipe(recipeName: string, index = 0) {
                 };
 
                 const response = await axios.post(
-                    'http://localhost:5001/api/private/rapid/nutrition',
+                    `${process.env.API_BASE_HREF}${process.env.API_PRIVATE_LINK}/rapid/nutrition`,
                     request,
                     {
                         headers: {

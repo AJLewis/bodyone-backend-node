@@ -68,7 +68,7 @@ export const addMessage = async (
         };
 
         const aiResponse = await axios.post(
-            'http://localhost:5001/api/private/openai/chat',
+            `${process.env.API_BASE_HREF}${process.env.API_PRIVATE_LINK}/openai/chat`,
             aiRequest,
             {
                 headers: {

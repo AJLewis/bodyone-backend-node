@@ -1,0 +1,134 @@
+{
+  "_id": "64cc2a6215669cf3cf5ca5d1",
+  "name": "Tomato Basil Pasta with Whole Wheat Penne",
+  "ingredients": [
+      {
+          "ingredient": {
+              "_id": "64cc2a6215669cf3cf5ca5c8",
+              "name": "whole wheat penne",
+              "calories": 180,
+              "serving_size_g": 50,
+              "fat_total_g": 1,
+              "fat_saturated_g": 0,
+              "protein_g": 7,
+              "sodium_mg": 0,
+              "potassium_mg": 363,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 39,
+              "fiber_g": 7,
+              "sugar_g": 2,
+              "__v": 0
+          },
+          "quantity": 200,
+          "_id": "64cc2a6215669cf3cf5ca5d2"
+      },
+      {
+          "ingredient": {
+              "_id": "64cc222deba34b046976e8b8",
+              "name": "tomato",
+              "calories": 18.2,
+              "serving_size_g": 100,
+              "fat_total_g": 0.2,
+              "fat_saturated_g": 0,
+              "protein_g": 0.9,
+              "sodium_mg": 4,
+              "potassium_mg": 23,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 3.9,
+              "fiber_g": 1.2,
+              "sugar_g": 2.6,
+              "__v": 0
+          },
+          "quantity": 200,
+          "_id": "64cc2a6215669cf3cf5ca5d3"
+      },
+      {
+          "ingredient": {
+              "_id": "64cc2a6215669cf3cf5ca5cc",
+              "name": "basil leaves",
+              "calories": 5.8,
+              "serving_size_g": 2,
+              "fat_total_g": 0.1,
+              "fat_saturated_g": 0,
+              "protein_g": 0.6,
+              "sodium_mg": 1,
+              "potassium_mg": 56,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 1,
+              "fiber_g": 0.8,
+              "sugar_g": 0,
+              "__v": 0
+          },
+          "quantity": 10,
+          "_id": "64cc2a6215669cf3cf5ca5d4"
+      },
+      {
+          "ingredient": {
+              "_id": "64cc2466d12dc3c13428b222",
+              "name": "garlic",
+              "calories": 149,
+              "serving_size_g": 100,
+              "fat_total_g": 0.5,
+              "fat_saturated_g": 0.2,
+              "protein_g": 6.4,
+              "sodium_mg": 17,
+              "potassium_mg": 401,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 33,
+              "fiber_g": 2.1,
+              "sugar_g": 1,
+              "__v": 0
+          },
+          "quantity": 2,
+          "_id": "64cc2a6215669cf3cf5ca5d5"
+      },
+      {
+          "ingredient": {
+              "_id": "64cc222deba34b046976e8c1",
+              "name": "olive oil",
+              "calories": 869.2,
+              "serving_size_g": 100,
+              "fat_total_g": 101.2,
+              "fat_saturated_g": 13.9,
+              "protein_g": 0,
+              "sodium_mg": 1,
+              "potassium_mg": 0,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "__v": 0
+          },
+          "quantity": 20,
+          "_id": "64cc2a6215669cf3cf5ca5d6"
+      },
+      {
+          "ingredient": {
+              "_id": "64cc26db7914d4a9b4c12abf",
+              "name": "salt",
+              "calories": 0,
+              "serving_size_g": 1,
+              "fat_total_g": 0,
+              "fat_saturated_g": 0,
+              "protein_g": 0,
+              "sodium_mg": 5900,
+              "potassium_mg": 0,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "__v": 0
+          },
+          "quantity": 1,
+          "_id": "64cc2a6215669cf3cf5ca5d7"
+      }
+  ],
+  "instructions": "1. Cook whole wheat penne according to package instructions. Drain and set aside.\n2. In a large skillet, heat olive oil over medium heat. Add minced garlic and cook until fragrant, about 1 minute.\n3. Add chopped tomatoes to the skillet. Cook for 3-4 minutes, until tomatoes soften.\n4. Add cooked whole wheat penne to the skillet. Stir well to combine.\n5. Tear basil leaves into small pieces and add them to the skillet. Season with salt.\n6. Cook for another 2-3 minutes, until all ingredients are heated through.\n7. Serve the tomato basil pasta hot and enjoy!",
+  "preparationTime": 10,
+  "cookingTime": 15,
+  "servings": 4,
+  "cuisine": "Italian",
+  "course": "Main Course",
+  "diet": "High Fiber",
+  "__v": 0
+}
