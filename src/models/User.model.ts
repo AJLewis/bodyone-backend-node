@@ -23,6 +23,7 @@ export enum SubscriptionType {
 
 export interface IUserDocument extends Document {
     [key: string]: any; 
+    
     username: string;
     password: string;
     email: string;

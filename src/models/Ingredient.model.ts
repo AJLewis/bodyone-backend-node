@@ -3,6 +3,7 @@ import mongoose, { Schema } from "mongoose";
 export interface IIngredient {
   name: string;
   calories: number;
+  caloriesPerUnit: number;
   serving_size_g: number;
   fat_total_g: number;
   fat_saturated_g: number;
@@ -20,6 +21,7 @@ export interface IIngredient {
 const ingredientSchema = new Schema({
   name: { type: String, required: true },
   calories: { type: Number, required: false },
+  caloriesPerUnit: { type: Number, required: false },
   serving_size_g: { type: Number, required: false },
   fat_total_g: { type: Number, required: false },
   fat_saturated_g: { type: Number, required: false },

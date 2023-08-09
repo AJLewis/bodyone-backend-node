@@ -15,6 +15,7 @@ import aiCoach from './ai-coach-routes';
 import points from './points-routes';
 import generateMealPlan from './generate-meal-plan-routes';
 import rapid from './rapid-api-routes';
+import midjourneyRoutes from './midjourney-routes';
 
 const router = express.Router();
 
@@ -33,5 +34,6 @@ router.use('/aicoach', aiCoach)
 router.use('/points', points)
 router.use('/generatemealplan', generateMealPlan)
 router.use('/rapid', rapid)
+router.use('/midjourney', midjourneyRoutes)
 
 export default router;

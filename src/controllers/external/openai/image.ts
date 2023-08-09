@@ -27,7 +27,7 @@ export const getImage = async (req: Request, res: Response, next: NextFunction) 
         res.json({ response });
     } catch (err) {
         console.error(err); // optional, logs the error on your server
-        res.status(500).json({ error: "An error occurred while processing your request." });
+        res.status(500).json({ error: err });
     }
 };
 
