@@ -6,6 +6,7 @@ export interface IProductImage {
   progress: string;
   inUse?: boolean;
   isPending?: boolean;
+  model?: string;
 }
 
 export interface IProductImageDocument extends Document, IProductImage {}
@@ -16,6 +17,7 @@ const ProductImageSchema = new Schema<IProductImage>({
     progress: { type: String, required: false },
     inUse: { type: Boolean, required: false },
     isPending: { type: Boolean, required: false },
+    model: { type: String, required: false },
   });
   
   export const ProductImageModel = mongoose.model<IProductImage & Document>('ProductImage', ProductImageSchema);

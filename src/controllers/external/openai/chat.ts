@@ -22,6 +22,8 @@ export const getChat = async (req: Request, res: Response, next?: NextFunction) 
     const maxTokens = req.body.maxTokens ? req.body.maxTokens : 2800;
     const functions = req.body.functions ? req.body.functions : null;
 
+    console.log(messages);
+
     const maxRetries = 20; // You can adjust this
     let retryCount = 0;
 
@@ -50,6 +52,8 @@ export const getChat = async (req: Request, res: Response, next?: NextFunction) 
 
             const delay = Math.pow(2, retryCount) * 1000; // Exponential backoff
             await sleep(delay); // Wait before retrying
+            getChat(req, res, next);
+            return;
         }
     }
 };

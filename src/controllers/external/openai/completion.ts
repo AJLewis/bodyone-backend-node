@@ -15,12 +15,10 @@ export const getCompletion = async (req: Request, res: Response, next: NextFunct
     try {
         const prompt = req.body.prompt
         const model = req.body.model ? req.body.model : OpenAiCompletionModels['textbabbage001'];
-        const maxTokens = req.body.maxTokens ? req.body.maxTokens : 1000;
         
         const gptResponse = await openai.createCompletion({
             model: model,
-            prompt: prompt,
-            max_tokens: maxTokens
+            prompt: prompt
         });
         
         const response = gptResponse ? gptResponse?.data : 'Could not find result';

@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document, ObjectId } from "mongoose";
 import { IIngredient } from "./Ingredient.model";
 
-interface IRecipeIngredient {
+export interface IRecipeIngredient {
   ingredient: IIngredient;
   quantity: number;
 }
@@ -9,11 +9,16 @@ interface IRecipeIngredient {
 export interface IRecipe extends Document {
   name: string;
   description?: string;
+  mealType?: string;
+  difficulty: string;
+  cookingTips: string;
+  servingSuggestions: string;
+  leftoverStorage: string;
   ingredients: IRecipeIngredient[];
+  tags: string[];
   instructions?: string[];
   preparationTime: number;
   cookingTime: number;
-  servings: number;
   cuisine: string;
   dietaryRequirements: string[];
   course: string;
@@ -30,11 +35,16 @@ const recipeIngredientSchema = new Schema({
 const recipeSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: false },
+  mealType: { type: String, required: true },
+  difficulty: { type: String, required: false },
+  cookingTips: { type: String, required: false },
+  servingSuggestions: { type: String, required: false },
+  leftoverStorage: { type: String, required: false },
   ingredients: [recipeIngredientSchema],
   instructions: { type: [String], required: true },
-  preparationTime: { type: Number, required: true }, // in minutes
+  tags: { type: [String], required: false },
+  preparationTime: { type: Number, required: false }, // in minutes
   cookingTime: { type: Number, required: false }, // in minutes
-  servings: { type: Number, required: true },
   cuisine: { type: String, required: false },
   dietaryRequirements: { type: [String], default: [] },
   course: { type: String, required: false }, // e.g., "main course", "dessert", etc.
