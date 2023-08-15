@@ -4,44 +4,22 @@ import UserMealPlanModel from '../../models/UserMealPlan.model';
 import MealPlanModel from '../../models/MealPlan.model';
 import MealModel from '../../models/Meal.model';
 import UserModel from '../../models/User.model';
-import IngredientModel, {IIngredient} from '../../models/Ingredient.model';
+import IngredientModel from '../../models/Ingredient.model';
 import {IGenerateMealPlanConfig} from '../../interfaces/IGenerateMealPlanConfig';
 import User from '../../models/User.model';
 import {createMealPlanPrompt} from '../../prompts/create-meal-plan-prompt';
-import {findParsableObject} from '../../utils/findParsalableObject';
+import {findParsableObject} from '../../utils/findParsableObject';
 import {ProductImageModel} from '../../models/ProductImage.model';
 import RecipeModel, {IRecipe} from '../../models/Recipe.model';
 import {generateRecipeImage} from './generate-recipe-image';
 import {validateAndCorrectRecipe} from '../../utils/validateAndCorrectRecipe';
+
 const recipeDemo = require('../../../_SCRAP/examples-json/recipe.json');
-
-// TODO: Force 'course' property to be 'Appetizer, Starter, Main Course, Dessert, Side Dish'
-// TODO: Add 'mealType' property to recipe to determine if it's breakfast, dinner, etc
-
-//TODO: fully implement or remove
 
 let aiRegenerationAttempts = 0;
 
-export const generateSingleMealPlan = async (
-    req: Request,
-    res: Response,
-    next?: NextFunction
-) => {
-    try {
-        const result = await createSingleMealPlan(
-            req.body.prompt,
-            req.body.userId,
-            req.body.date
-        );
-        res.status(201).json(result);
-    } catch (error: any) {
-        console.error(error); // optional, logs the error on your server
-        res.status(500).json({error: error});
-    }
-};
-
 // Multiple meal plans endpoint
-export const generateMultipleMealPlans = async (
+export const generateMealPlans = async (
     req: Request,
     res: Response,
     next?: NextFunction
@@ -72,7 +50,7 @@ export const generateMultipleMealPlans = async (
         try {
             var json = JSON.parse(mealPlanData);
         } catch (err) {
-            generateMultipleMealPlans(req, res, next);
+            generateMealPlans(req, res, next);
         }
 
         for (const plan of json.mealPlans) {
@@ -215,10 +193,13 @@ const createSingleMealPlan = async (
     if (user) {
         user.mealPlans.push(userMealPlan._id);
         await user.save();
+        console.log('saved to user')
     } else {
         throw new Error('User not found');
     }
 
+    console.log('ready to return data');
+    
     return {
         message: 'Meal plan generated successfully',
         userMealPlan,
