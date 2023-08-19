@@ -24,7 +24,8 @@ export const register = (req: Request, res: Response, next: NextFunction) => {
             }
             // On successful login, a JWT is created and sent back.
             const token = await jwt.sign({ userId: user._id }, jwtSecret as string, { expiresIn: '1d' });
-            return res.json({ token });
+            const userId = user._id;
+            return res.json({ token, userId });
         });
     })(req, res, next);
 };
@@ -39,11 +40,12 @@ export const login = (req: Request, res: Response, next: NextFunction) => {
         }
         req.logIn(user, function(err) {
             if (err) { 
-                return next(err); 
+                return next(err);
             }
             // On successful login, a JWT is created and sent back.
             const token = jwt.sign({ userId: user._id }, jwtSecret as string, { expiresIn: '1d' });
-            return res.json({ token });
+            const userId = user._id
+            return res.json({ token, userId });
         });
     })(req, res, next);
 };
