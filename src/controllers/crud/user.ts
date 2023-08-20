@@ -13,10 +13,11 @@ export const getAllUsers = async (req: Request, res: Response, next?: NextFuncti
 
 export const getUserBasic = async (req: Request, res: Response, next?: NextFunction) => {
     try {
-        const user = await User.findById(req.params.id)
+        const user = await User.findById(req.params.id).populate('points')
         if (!user) {
             return res.status(404).send();
         }
+        console.log(user)
         res.send(user);
     } catch (e) {
         console.error(e); // optional, logs the error on your server
@@ -70,7 +71,7 @@ export const updateUser = async (req: Request, res: Response, next?: NextFunctio
   console.log('update user')
   const updates = req.body;
   try {
-      const user = await User.findById(req.params.id);
+      const user = await User.findById(req.body._id);
       if (!user) {
           return res.status(404).send();
       }

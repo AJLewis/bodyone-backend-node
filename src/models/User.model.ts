@@ -28,6 +28,8 @@ export interface IUserDocument extends Document {
     email: string;
     firstName: string;
     lastName: string;
+    handle: string;
+    avatar: string;
     dateOfBirth: Date;
     gender: string;
     metrics: mongoose.Schema.Types.ObjectId;
@@ -51,6 +53,8 @@ const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
     firstName: { type: String, required: false },
     lastName: { type: String, required: false },
+    handle: { type: String, required: false },
+    avatar: { type: String, required: false },
     dateOfBirth: { type: Date, required: false },
     gender: { type: String, required: false },
     metrics: { type: mongoose.Schema.Types.ObjectId, ref: 'UserMetrics' },
