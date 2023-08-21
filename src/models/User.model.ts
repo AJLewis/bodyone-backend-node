@@ -44,6 +44,7 @@ export interface IUserDocument extends Document {
     mealPlans: IUserMealPlanDocument[];
     workoutPlans: IUserWorkoutPlanDocument[];
     aiChats: IAICoachChatDocument[];
+    theme: mongoose.Schema.Types.ObjectId;
     comparePassword: (candidatePassword: string, cb: (err: any, isMatch: any) => void) => void;
 }
 
@@ -79,6 +80,7 @@ const userSchema = new Schema({
     workoutPlans: [{ type: Schema.Types.ObjectId, ref: 'UserWorkoutPlan' }],
     aiChats: [{ type: Schema.Types.ObjectId, ref: 'AICoachChat' }],
     accountCreated: { type: Date, default: Date.now },
+    theme: { type: mongoose.Schema.Types.ObjectId, ref: 'Theme' },
 });
 
 userSchema.methods.comparePassword = async function(candidatePassword: any, cb: any) {
