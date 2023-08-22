@@ -13,6 +13,8 @@ import userMealPlansRoutes from './user-meal-plan-routes';
 import mealPlansRoutes from './meal-plan-routes';
 import aiCoach from './ai-coach-routes';
 import points from './points-routes';
+import notification from './notification-routes';
+import message from './message-routes';
 import generateMealPlan from './generate-meal-plan-routes';
 import rapid from './rapid-api-routes';
 import midjourneyRoutes from './midjourney-routes';
@@ -32,6 +34,8 @@ router.use('/mealplan', mealPlansRoutes)
 router.use('/usermealplan', userMealPlansRoutes)
 router.use('/aicoach', aiCoach)
 router.use('/points', points)
+router.use('/notification', notification)
+router.use('/message', message)
 router.use('/generatemealplan', generateMealPlan)
 router.use('/rapid', rapid)
 router.use('/midjourney', midjourneyRoutes)
